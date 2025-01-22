@@ -58,18 +58,10 @@
         {{-- Menu --}}
         <div>
             <ul>
-                <li class="mb-1">
-                    <a class="block p-4 text-sm font-semibold {{ Route::is('home') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50 hover:text-blue-600'}} rounded" href="#">Home</a>
-                </li>
-                <li class="mb-1">
-                    <a class="block p-4 text-sm font-semibold {{ Route::is('about') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50 hover:text-blue-600'}} rounded" href="#">About Us</a>
-                </li>
-                <li class="mb-1">
-                    <a class="block p-4 text-sm font-semibold {{ Route::is('services') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50 hover:text-blue-600'}} rounded" href="#">Services</a>
-                </li>
-                <li class="mb-1">
-                    <a class="block p-4 text-sm font-semibold {{ Route::is('contact') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50 hover:text-blue-600'}} rounded" href="#">Contact</a>
-                </li>
+                <x-responsive-nav-link route="home" name="Home"/>  
+                <x-responsive-nav-link route="about" name="About Us"/>
+                <x-responsive-nav-link route="services" name="Services"/>
+                <x-responsive-nav-link route="contact" name="Contact"/>
             </ul>
         </div>
 
