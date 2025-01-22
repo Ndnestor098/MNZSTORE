@@ -30,12 +30,7 @@
     </ul>
     
     {{-- Auth --}}
-    <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="#">
-        Sign In
-    </a>
-    <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">
-        Sign up
-    </a>
+    <x-auth-link/>
 </nav>
 {{-- End Menu --}}
 
@@ -81,8 +76,7 @@
         {{-- Auth --}}
         <div class="mt-auto">
             <div class="pt-6">
-                <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl" href="#">Sign in</a>
-                <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="#">Sign Up</a>
+                <x-auth-link resposive="true"/>
             </div>
 
             <p class="my-4 text-xs text-center text-gray-400">
