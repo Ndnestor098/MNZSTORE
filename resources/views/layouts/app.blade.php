@@ -21,7 +21,7 @@
         {{-- End Navigation --}}
 
         {{-- Content --}}
-        {{ $content }}
+        {{ $slot }}
         {{-- End Content --}}
 
         {{-- Footer --}}

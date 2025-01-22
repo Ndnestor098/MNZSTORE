@@ -7,6 +7,19 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/about', function () {
+    return view('home');
+})->name('about');
+
+Route::get('/services', function () {
+    return view('home');
+})->name('services');
+
+Route::get('/contact', function () {
+    return view('home');
+})->name('contact');
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
