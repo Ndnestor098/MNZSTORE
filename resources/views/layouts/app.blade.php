@@ -17,11 +17,14 @@
     </head>
     <body class="bg-black">
         {{-- Navigation --}}
-        @extends('layouts.navigation')
+        @include('layouts.navigation')
         {{-- End Navigation --}}
 
         {{-- Content --}}
-        {{ $slot }}
+        <div>
+            {{ $slot }}
+
+        </div>
         {{-- End Content --}}
 
         {{-- Footer --}}
