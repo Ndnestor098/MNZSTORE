@@ -1,5 +1,5 @@
 {{-- Menu --}}
-<nav class="sticky px-4 py-4 flex justify-between items-center bg-white top-0">
+<nav class="sticky z-50 px-4 py-4 flex justify-between items-center bg-white top-0">
     {{-- Logo --}}
     <x-application-logo />
 
