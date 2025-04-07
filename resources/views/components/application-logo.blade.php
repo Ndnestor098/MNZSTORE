@@ -7,5 +7,9 @@ $classes = isset( $resposive )
 
 
 <a class="{{ $classes }}" href="{{ route('home') }}">
-    MNZSTORE
+    <img 
+        src="/assets/image/logo_1.png" 
+        alt="logo"
+        class="w-[120px] mx-2"
+    >
 </a>

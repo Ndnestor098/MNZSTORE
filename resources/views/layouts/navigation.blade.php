@@ -1,11 +1,11 @@
 {{-- Menu --}}
-<nav class="sticky z-50 px-4 py-4 flex justify-between items-center bg-white top-0">
+<nav class="sticky z-50 px-4 py-4 flex justify-between items-center top-0 bg-gradient-to-r from-color_1 via-color_2 to-color_3">
     {{-- Logo --}}
     <x-application-logo />
 
     {{-- Burger --}}
     <div class="lg:hidden">
-        <button class="navbar-burger flex items-center text-blue-600 p-3">
+        <button class="navbar-burger flex items-center text-white p-3">
             <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <title>Mobile menu</title>
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
@@ -17,7 +17,7 @@
     <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">    
         <x-nav-link route="home" name="Home"/>
 
-        <x-nav-link route="about" name="About Us"/>
+        <x-nav-link route="about" name="Productos"/>
 
         <x-nav-link route="services" name="Services"/>
 
