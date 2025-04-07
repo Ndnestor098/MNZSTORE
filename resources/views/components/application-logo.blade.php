@@ -7,5 +7,5 @@ $classes = isset( $resposive )
 
 
 <a class="{{ $classes }}" href="{{ route('home') }}">
-    MZNSTORE
+    MNZSTORE
 </a>
