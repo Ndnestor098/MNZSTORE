@@ -11,7 +11,9 @@
         </div>
     </div>
 
-    <div class="flex justify-center items-center max-w-[500px] relative bg-transparent mb-5 overflow-hidden
+    <div 
+        id="container-hero" 
+        class="flex justify-center items-center max-w-[500px] relative bg-transparent mb-5 overflow-hidden
                 sm:mb-0
                 after:content-[''] after:border-4 after:border-white after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-full after:z-0 after:opacity-25
                 before:content-[''] before:border-4 before:border-white before:absolute before:w-72 before:h-72 before:rounded-full before:z-0 before:opacity-25">
@@ -50,6 +52,7 @@
     let position = 0;
     const slider = document.getElementById("slider");
     const totalImages = slider.children.length;
+    const carouselContainerHero = document.getElementById('container-hero');
 
     function moveLeft() {
         // Si está en la primera imagen, saltamos a la última
@@ -72,7 +75,8 @@
     }
 
     function updateSlider() {
-        const translateX = -position * 500; // 500px es el ancho del contenedor
+        const containerWidth = carouselContainerHero.offsetWidth;
+        const translateX = -position * containerWidth;
         slider.style.transform = `translateX(${translateX}px)`;
 
         if(position === totalImages){

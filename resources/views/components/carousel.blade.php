@@ -95,24 +95,55 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const carouselContainer = document.getElementById('carousel-container');
-  const prevButton = document.getElementById('prevButton');
-  const nextButton = document.getElementById('nextButton');
+    const carouselContainer = document.getElementById('carousel-container');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
 
-  prevButton.addEventListener('click', () => {
-    scrollCarousel(-1);
-  });
+    // Función para el retroceso del carrusel
+    function scrollCarousel(direction) {
+        const scrollAmount = carouselContainer.offsetWidth * 0.75 * direction;
+        carouselContainer.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
 
-  nextButton.addEventListener('click', () => {
-    scrollCarousel(1);
-  });
+    // Función para verificar la posición y hacer el retroceso al inicio si es necesario
+    function checkScrollPosition() {
+        const scrollLeft = carouselContainer.scrollLeft;
+        const scrollWidth = carouselContainer.scrollWidth;
+        const clientWidth = carouselContainer.clientWidth;
 
-  function scrollCarousel(direction) {
-    const scrollAmount = carouselContainer.offsetWidth * 0.75 * direction;
-    carouselContainer.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth'
+        // Si se ha llegado al final, hacer el retroceso
+        if (scrollLeft + clientWidth >= scrollWidth - 1) {
+            setTimeout(() => {
+                carouselContainer.scrollTo({
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
+        
+        // Si se ha llegado al inicio, hacer el desplazamiento al final
+        if (scrollLeft <= 0) {
+            setTimeout(() => {
+                carouselContainer.scrollTo({
+                    left: scrollWidth,
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
+    }
+
+    // Detectar cuando se haga click en los botones de navegación
+    prevButton.addEventListener('click', () => {
+        scrollCarousel(-1); // Retroceder
+        checkScrollPosition(); // Verificar si estamos al inicio
     });
-  }
+
+    nextButton.addEventListener('click', () => {
+        scrollCarousel(1); // Avanzar
+        checkScrollPosition(); // Verificar si estamos al final
+    });
 });
 </script>
