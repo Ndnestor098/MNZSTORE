@@ -1,0 +1,11 @@
+services:
+  test:
+    container_name: test
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/var/www
+    ports:
+      - "9500:9500"
+    restart : always
