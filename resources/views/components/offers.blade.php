@@ -19,7 +19,8 @@
     </header>
 
     <section class="flex gap-2 h-full justify-center flex-wrap w-full max-w-[830px]">
-        @while ($loop->iteration <= 6)
+        @php $loop = 0; @endphp	
+        @while ($loop <= 5)
             <article class="flex flex-col items-center gap-4 w-full max-w-[175px] bg-white rounded-lg shadow-sm hover:shadow-lg py-4 px-1 sm:max-w-[270px] sm:p-4">
                 <a href="#">
                     <figure>
@@ -30,7 +31,7 @@
                         >
                     </figure>
                 </a>
-                <h3 class="text-lg font-normal sm:font-medium">SAMSUNG - GALAXY S24</h3>
+                <h3 class="font-normal text-sm sm:font-medium sm:text-base">SAMSUNG - GALAXY S24</h3>
                 <p class="text-gray-500 text-sm font-medium">(256GB | Onyx Black)</p>
                 <div class="flex justify-center gap-2 items-center w-full">
                     <span 
@@ -44,9 +45,12 @@
                     </span>
                 </div>
                 <footer>
-                    <a href="#" class="bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2">Comprar</a>
+                    <a href="#" class="bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2">
+                        Comprar
+                    </a>
                 </footer>
             </article>
+            @php $loop++; @endphp
         @endwhile
     </section>
 </section>
