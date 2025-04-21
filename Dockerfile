@@ -26,8 +26,8 @@ WORKDIR /var/www
 COPY . .
 
 # Instalar dependencias de PHP y de Octane/RoadRunner
-RUN composer install && \
-    composer require laravel/octane spiral/roadrunner
+RUN composer install 
+RUN composer require laravel/octane spiral/roadrunner
 
 # Configurar entorno
 COPY .env.example .env
