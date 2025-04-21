@@ -11,11 +11,73 @@
         </div>
     </div>
 
-    <div class="flex justify-center items-center max-w-[500px] relative bg-transparent mb-5
+    <div class="flex justify-center items-center max-w-[500px] relative bg-transparent mb-5 overflow-hidden
                 sm:mb-0
                 after:content-[''] after:border-4 after:border-white after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-full after:z-0 after:opacity-25
                 before:content-[''] before:border-4 before:border-white before:absolute before:w-72 before:h-72 before:rounded-full before:z-0 before:opacity-25">
-
-        <img class="z-10 object-cover w-full" src="https://quomodosoft.com/html/jupiter/jupiter/assets/images/w1.png" alt="">
+        <div id="slider" class="flex transition-transform duration-500">
+            <img class="z-10 object-cover w-full flex-shrink-0" src="https://quomodosoft.com/html/jupiter/jupiter/assets/images/w1.png" alt="">
+            <img class="z-10 object-cover w-full flex-shrink-0" src="https://quomodosoft.com/html/jupiter/jupiter/assets/images/w1.png" alt="">
+            <img class="z-10 object-cover w-full flex-shrink-0" src="https://quomodosoft.com/html/jupiter/jupiter/assets/images/w1.png" alt="">
+        </div>
+        <div>
+            <!-- Botones de navegación -->
+            <div class="absolute top-1/2 left-2 transform -translate-y-1/2 z-20">
+                <button 
+                    onclick="moveLeft()" 
+                    class="flex justify-center items-center bg-color_1 text-white rounded-full p-2 transition duration-300 hover:bg-color_2 hover:fill-color_2"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="absolute top-1/2 right-2 transform -translate-y-1/2 z-20">
+                <button 
+                    onclick="moveRight()" 
+                    class="flex justify-center items-center bg-color_1 text-white rounded-full p-2 transition duration-300 hover:bg-color_2 hover:fill-color_2"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
 </section>
+
+<script>
+    let position = 0;
+    const slider = document.getElementById("slider");
+    const totalImages = slider.children.length;
+
+    function moveLeft() {
+        // Si está en la primera imagen, saltamos a la última
+        if (position === 0) {
+            position = totalImages - 1;
+        } else {
+            position--;
+        }
+        updateSlider();
+    }
+
+    function moveRight() {
+        // Si está en la última imagen, volvemos al inicio
+        if (position === totalImages - 1) {
+            position = 0;
+        } else {
+            position++;
+        }
+        updateSlider();
+    }
+
+    function updateSlider() {
+        const translateX = -position * 500; // 500px es el ancho del contenedor
+        slider.style.transform = `translateX(${translateX}px)`;
+
+        if(position === totalImages){
+            
+        }
+    }
+    setInterval(moveRight, 5000); // Cambia la imagen cada 5 segundos
+</script>

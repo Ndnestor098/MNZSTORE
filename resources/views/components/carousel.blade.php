@@ -34,195 +34,38 @@
         <div id="carousel-container" class="w-full overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hidden">
             <section id="carousel" class="flex gap-2 h-full">
                 <!-- Artículos del carrusel -->
-                <article class="flex-shrink-0 flex flex-col items-center gap-4 w-[270px] bg-white rounded-lg shadow-sm hover:shadow-lg p-4 snap-start">
-                    <a href="#">
-                        <figure>
-                            <img 
-                                src="https://www.euronics.it/dw/image/v2/BFPN_PRD/on/demandware.static/-/Sites-catalog_euronics_master/default/dw3c00864d/hi-res/242000298.jpg?sw=1000&q=90&strip=false" 
-                                alt="Imagen del producto"
-                                class="w-full h-auto rounded-lg shadow-lg"
+                @php $loop = 0; @endphp	
+                @while ($loop <= 5)
+                    <article class="flex-shrink-0 flex flex-col items-center gap-4 w-[270px] bg-white rounded-lg shadow-sm hover:shadow-lg p-4 snap-start">
+                        <a href="#">
+                            <figure>
+                                <img 
+                                    src="https://www.euronics.it/dw/image/v2/BFPN_PRD/on/demandware.static/-/Sites-catalog_euronics_master/default/dw3c00864d/hi-res/242000298.jpg?sw=1000&q=90&strip=false" 
+                                    alt="Imagen del producto"
+                                    class="w-full h-auto rounded-lg shadow-lg"
+                                >
+                            </figure>
+                        </a>
+                        <h3 class="font-medium">SAMSUNG - GALAXY S24</h3>
+                        <p class="text-gray-500 text-sm font-medium">(256GB | Onyx Black)</p>
+                        <div class="flex justify-center gap-2 items-center w-full">
+                            <span 
+                                class="bg-gradient-to-r from-color_1 via-blue-800 to-blue-500 text-transparent bg-clip-text text-xl font-bold"
                             >
-                        </figure>
-                    </a>
-                    <h3 class="font-medium">SAMSUNG - GALAXY S24</h3>
-                    <p class="text-gray-500 text-sm font-medium">(256GB | Onyx Black)</p>
-                    <div class="flex justify-center gap-2 items-center w-full">
-                        <span 
-                            class="bg-gradient-to-r from-color_1 via-blue-800 to-blue-500 text-transparent bg-clip-text text-xl font-bold"
-                        >
-                            € 599,00
-                        </span>
-                        <span class="relative text-gray-500 text-sm font-medium">
-                            € 989,00
-                            <span class="absolute top-1/2 left-0 right-0 h-px bg-gray-400"></span>
-                        </span>
-                    </div>
-                    <footer>
-                        <a href="#" class="bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2">Comprar</a>
-                    </footer>
-                </article>
-                <article class="flex-shrink-0 flex flex-col items-center gap-4 w-[270px] bg-white rounded-lg shadow-sm hover:shadow-lg p-4 snap-start">
-                    <a href="#">
-                        <figure>
-                            <img 
-                                src="https://www.euronics.it/dw/image/v2/BFPN_PRD/on/demandware.static/-/Sites-catalog_euronics_master/default/dw3c00864d/hi-res/242000298.jpg?sw=1000&q=90&strip=false" 
-                                alt="Imagen del producto"
-                                class="w-full h-auto rounded-lg shadow-lg"
-                            >
-                        </figure>
-                    </a>
-                    <h3 class="font-medium">SAMSUNG - GALAXY S24</h3>
-                    <p class="text-gray-500 text-sm font-medium">(256GB | Onyx Black)</p>
-                    <div class="flex justify-center gap-2 items-center w-full">
-                        <span 
-                            class="bg-gradient-to-r from-color_1 via-blue-800 to-blue-500 text-transparent bg-clip-text text-xl font-bold"
-                        >
-                            € 599,00
-                        </span>
-                        <span class="relative text-gray-500 text-sm font-medium">
-                            € 989,00
-                            <span class="absolute top-1/2 left-0 right-0 h-px bg-gray-400"></span>
-                        </span>
-                    </div>
-                    <footer>
-                        <a href="#" class="bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2">Comprar</a>
-                    </footer>
-                </article>
-                <article class="flex-shrink-0 flex flex-col items-center gap-4 w-[270px] bg-white rounded-lg shadow-sm hover:shadow-lg p-4 snap-start">
-                    <a href="#">
-                        <figure>
-                            <img 
-                                src="https://www.euronics.it/dw/image/v2/BFPN_PRD/on/demandware.static/-/Sites-catalog_euronics_master/default/dw3c00864d/hi-res/242000298.jpg?sw=1000&q=90&strip=false" 
-                                alt="Imagen del producto"
-                                class="w-full h-auto rounded-lg shadow-lg"
-                            >
-                        </figure>
-                    </a>
-                    <h3 class="font-medium">SAMSUNG - GALAXY S24</h3>
-                    <p class="text-gray-500 text-sm font-medium">(256GB | Onyx Black)</p>
-                    <div class="flex justify-center gap-2 items-center w-full">
-                        <span 
-                            class="bg-gradient-to-r from-color_1 via-blue-800 to-blue-500 text-transparent bg-clip-text text-xl font-bold"
-                        >
-                            € 599,00
-                        </span>
-                        <span class="relative text-gray-500 text-sm font-medium">
-                            € 989,00
-                            <span class="absolute top-1/2 left-0 right-0 h-px bg-gray-400"></span>
-                        </span>
-                    </div>
-                    <footer>
-                        <a href="#" class="bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2">Comprar</a>
-                    </footer>
-                </article>
-                <article class="flex-shrink-0 flex flex-col items-center gap-4 w-[270px] bg-white rounded-lg shadow-sm hover:shadow-lg p-4 snap-start">
-                    <a href="#">
-                        <figure>
-                            <img 
-                                src="https://www.euronics.it/dw/image/v2/BFPN_PRD/on/demandware.static/-/Sites-catalog_euronics_master/default/dw3c00864d/hi-res/242000298.jpg?sw=1000&q=90&strip=false" 
-                                alt="Imagen del producto"
-                                class="w-full h-auto rounded-lg shadow-lg"
-                            >
-                        </figure>
-                    </a>
-                    <h3 class="font-medium">SAMSUNG - GALAXY S24</h3>
-                    <p class="text-gray-500 text-sm font-medium">(256GB | Onyx Black)</p>
-                    <div class="flex justify-center gap-2 items-center w-full">
-                        <span 
-                            class="bg-gradient-to-r from-color_1 via-blue-800 to-blue-500 text-transparent bg-clip-text text-xl font-bold"
-                        >
-                            € 599,00
-                        </span>
-                        <span class="relative text-gray-500 text-sm font-medium">
-                            € 989,00
-                            <span class="absolute top-1/2 left-0 right-0 h-px bg-gray-400"></span>
-                        </span>
-                    </div>
-                    <footer>
-                        <a href="#" class="bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2">Comprar</a>
-                    </footer>
-                </article>
-                <article class="flex-shrink-0 flex flex-col items-center gap-4 w-[270px] bg-white rounded-lg shadow-sm hover:shadow-lg p-4 snap-start">
-                    <a href="#">
-                        <figure>
-                            <img 
-                                src="https://www.euronics.it/dw/image/v2/BFPN_PRD/on/demandware.static/-/Sites-catalog_euronics_master/default/dw3c00864d/hi-res/242000298.jpg?sw=1000&q=90&strip=false" 
-                                alt="Imagen del producto"
-                                class="w-full h-auto rounded-lg shadow-lg"
-                            >
-                        </figure>
-                    </a>
-                    <h3 class="font-medium">SAMSUNG - GALAXY S24</h3>
-                    <p class="text-gray-500 text-sm font-medium">(256GB | Onyx Black)</p>
-                    <div class="flex justify-center gap-2 items-center w-full">
-                        <span 
-                            class="bg-gradient-to-r from-color_1 via-blue-800 to-blue-500 text-transparent bg-clip-text text-xl font-bold"
-                        >
-                            € 599,00
-                        </span>
-                        <span class="relative text-gray-500 text-sm font-medium">
-                            € 989,00
-                            <span class="absolute top-1/2 left-0 right-0 h-px bg-gray-400"></span>
-                        </span>
-                    </div>
-                    <footer>
-                        <a href="#" class="bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2">Comprar</a>
-                    </footer>
-                </article>
-                <article class="flex-shrink-0 flex flex-col items-center gap-4 w-[270px] bg-white rounded-lg shadow-sm hover:shadow-lg p-4 snap-start">
-                    <a href="#">
-                        <figure>
-                            <img 
-                                src="https://www.euronics.it/dw/image/v2/BFPN_PRD/on/demandware.static/-/Sites-catalog_euronics_master/default/dw3c00864d/hi-res/242000298.jpg?sw=1000&q=90&strip=false" 
-                                alt="Imagen del producto"
-                                class="w-full h-auto rounded-lg shadow-lg"
-                            >
-                        </figure>
-                    </a>
-                    <h3 class="font-medium">SAMSUNG - GALAXY S24</h3>
-                    <p class="text-gray-500 text-sm font-medium">(256GB | Onyx Black)</p>
-                    <div class="flex justify-center gap-2 items-center w-full">
-                        <span 
-                            class="bg-gradient-to-r from-color_1 via-blue-800 to-blue-500 text-transparent bg-clip-text text-xl font-bold"
-                        >
-                            € 599,00
-                        </span>
-                        <span class="relative text-gray-500 text-sm font-medium">
-                            € 989,00
-                            <span class="absolute top-1/2 left-0 right-0 h-px bg-gray-400"></span>
-                        </span>
-                    </div>
-                    <footer>
-                        <a href="#" class="bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2">Comprar</a>
-                    </footer>
-                </article>
-                <article class="flex-shrink-0 flex flex-col items-center gap-4 w-[270px] bg-white rounded-lg shadow-sm hover:shadow-lg p-4 snap-start">
-                    <a href="#">
-                        <figure>
-                            <img 
-                                src="https://www.euronics.it/dw/image/v2/BFPN_PRD/on/demandware.static/-/Sites-catalog_euronics_master/default/dw3c00864d/hi-res/242000298.jpg?sw=1000&q=90&strip=false" 
-                                alt="Imagen del producto"
-                                class="w-full h-auto rounded-lg shadow-lg"
-                            >
-                        </figure>
-                    </a>
-                    <h3 class="font-medium">SAMSUNG - GALAXY S24</h3>
-                    <p class="text-gray-500 text-sm font-medium">(256GB | Onyx Black)</p>
-                    <div class="flex justify-center gap-2 items-center w-full">
-                        <span 
-                            class="bg-gradient-to-r from-color_1 via-blue-800 to-blue-500 text-transparent bg-clip-text text-xl font-bold"
-                        >
-                            € 599,00
-                        </span>
-                        <span class="relative text-gray-500 text-sm font-medium">
-                            € 989,00
-                            <span class="absolute top-1/2 left-0 right-0 h-px bg-gray-400"></span>
-                        </span>
-                    </div>
-                    <footer>
-                        <a href="#" class="bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2">Comprar</a>
-                    </footer>
-                </article>
+                                € 599,00
+                            </span>
+                            <span class="relative text-gray-500 text-sm font-medium">
+                                € 989,00
+                                <span class="absolute top-1/2 left-0 right-0 h-px bg-gray-400"></span>
+                            </span>
+                        </div>
+                        <footer>
+                            <a href="#" class="bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2">Comprar</a>
+                        </footer>
+                    </article>
+                    @php $loop++; @endphp
+                @endwhile
+                
             </section>
         </div>
 
