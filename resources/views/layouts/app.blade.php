@@ -23,7 +23,13 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         
     </head>
-    <body class="bg-black">
+    <body>
+        {{-- Icon Whatsapp --}}
+        <div class="fixed bottom-4 right-4 z-50 w-12 h-12">
+            <a href="#">
+                <img src="/assets/image/whatsapp.webp" alt="whatsapp">
+            </a>
+        </div>
         {{-- Navigation --}}
         @include('layouts.navigation')
         {{-- End Navigation --}}
