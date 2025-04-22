@@ -9,5 +9,8 @@
     
     {{-- Offers --}}
     <x-carousel />
+
+    {{-- Feature Section --}}
+    <x-featureSection />
     
 </x-app-layout>

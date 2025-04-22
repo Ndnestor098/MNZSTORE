@@ -60,7 +60,12 @@
                             </span>
                         </div>
                         <footer>
-                            <a href="#" class="bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2">Comprar</a>
+                            <a 
+                                href="#" 
+                                class="bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2"
+                            >
+                                Comprar
+                            </a>
                         </footer>
                     </article>
                     @php $loop++; @endphp

@@ -26,6 +26,9 @@ export default {
             },
             height : {
                 'panel': 'calc(100vh - 72px)'
+            },
+            backgroundImage: {
+                'feature-section': "url('https://cdn.pixabay.com/photo/2015/05/31/15/18/technology-792180_960_720.jpg')",                
             }
         },
     },

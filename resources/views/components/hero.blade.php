@@ -19,8 +19,9 @@
                 before:content-[''] before:border-4 before:border-white before:absolute before:w-72 before:h-72 before:rounded-full before:z-0 before:opacity-25">
         <div id="slider" class="flex transition-transform duration-500">
             <img class="z-10 object-cover w-full flex-shrink-0" src="https://quomodosoft.com/html/jupiter/jupiter/assets/images/w1.png" alt="">
-            <img class="z-10 object-cover w-full flex-shrink-0" src="https://quomodosoft.com/html/jupiter/jupiter/assets/images/w1.png" alt="">
-            <img class="z-10 object-cover w-full flex-shrink-0" src="https://quomodosoft.com/html/jupiter/jupiter/assets/images/w1.png" alt="">
+            <img class="z-10 object-cover w-full flex-shrink-0" src="https://quomodosoft.com/html/jupiter/jupiter/assets/images/w2.png" alt="">
+            <img class="z-10 object-cover w-full flex-shrink-0" src="https://quomodosoft.com/html/jupiter/jupiter/assets/images/w3.png" alt="">
+            <img class="z-10 object-cover w-full flex-shrink-0" src="https://quomodosoft.com/html/jupiter/jupiter/assets/images/w4.png" alt="">
         </div>
         <div>
             <!-- Botones de navegación -->
