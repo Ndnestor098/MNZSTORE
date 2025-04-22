@@ -54,7 +54,7 @@
                         </div>
                         <a 
                             href="#"
-                            class="w-36 bg-color_1 text-white py-2 px-5 rounded-full font-bold hover:bg-color_2"
+                            class="w-36 bg-color_1 text-white py-2 px-5 rounded-full font-bold text-center hover:bg-color_2"
                         >
                             Comprar
                         </a>

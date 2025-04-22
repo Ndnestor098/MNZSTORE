@@ -6,11 +6,12 @@
     
     {{-- Offers --}}
     <x-offers />
-    
-    {{-- Offers --}}
-    <x-carousel />
 
     {{-- Feature Section --}}
     <x-featureSection />
+
+    {{-- Offers --}}
+    <x-carousel />
+
     
 </x-app-layout>

@@ -36,7 +36,7 @@
         {{-- End Content --}}
 
         {{-- Footer --}}
-
+        @include('layouts.footer')
         {{-- End Footer --}}
     </body>
     
