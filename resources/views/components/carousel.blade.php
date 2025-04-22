@@ -99,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.getElementById('prevButton');
     const nextButton = document.getElementById('nextButton');
 
-    // Función para el retroceso del carrusel
     function scrollCarousel(direction) {
         const scrollAmount = carouselContainer.offsetWidth * 0.75 * direction;
         carouselContainer.scrollBy({
@@ -108,42 +107,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Función para verificar la posición y hacer el retroceso al inicio si es necesario
-    function checkScrollPosition() {
+    // Botón Izquierdo
+    prevButton.addEventListener('click', () => {
+        const scrollLeft = carouselContainer.scrollLeft;
+        if (scrollLeft <= 0) {
+            // Si ya está al inicio, manda al final
+            carouselContainer.scrollTo({
+                left: carouselContainer.scrollWidth,
+                behavior: 'smooth'
+            });
+        } else {
+            scrollCarousel(-1);
+        }
+    });
+
+    // Botón Derecho
+    nextButton.addEventListener('click', () => {
         const scrollLeft = carouselContainer.scrollLeft;
         const scrollWidth = carouselContainer.scrollWidth;
         const clientWidth = carouselContainer.clientWidth;
 
-        // Si se ha llegado al final, hacer el retroceso
         if (scrollLeft + clientWidth >= scrollWidth - 1) {
-            setTimeout(() => {
-                carouselContainer.scrollTo({
-                    left: 0,
-                    behavior: 'smooth'
-                });
-            }, 100);
+            // Si ya está al final, manda al inicio
+            carouselContainer.scrollTo({
+                left: 0,
+                behavior: 'smooth'
+            });
+        } else {
+            scrollCarousel(1);
         }
-        
-        // Si se ha llegado al inicio, hacer el desplazamiento al final
-        if (scrollLeft <= 0) {
-            setTimeout(() => {
-                carouselContainer.scrollTo({
-                    left: scrollWidth,
-                    behavior: 'smooth'
-                });
-            }, 100);
-        }
-    }
-
-    // Detectar cuando se haga click en los botones de navegación
-    prevButton.addEventListener('click', () => {
-        scrollCarousel(-1); // Retroceder
-        checkScrollPosition(); // Verificar si estamos al inicio
-    });
-
-    nextButton.addEventListener('click', () => {
-        scrollCarousel(1); // Avanzar
-        checkScrollPosition(); // Verificar si estamos al final
     });
 });
+
 </script>
