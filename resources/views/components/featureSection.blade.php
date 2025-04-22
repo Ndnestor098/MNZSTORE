@@ -96,22 +96,22 @@
     // Función que mueve el slider a la imagen correspondiente según el índice
     function moveTo(index) {
         positionFeature = index; // Actualizamos la posición
-        updateSlider(); // Actualizamos el slider
+        updateSliderFeature(); // Actualizamos el slider
     }
 
     // Función que mueve el slider hacia la derecha
-    function moveRight() {
+    function moveRightFeature() {
         if (positionFeature === totalImagesFeature - 1) {
             positionFeature = 0;  // Si está en la última imagen, volvemos al inicio
         } else {
             positionFeature++;
         }
         
-        updateSlider();
+        updateSliderFeature();
     }
 
     // Función que actualiza el slider
-    function updateSlider() {
+    function updateSliderFeature() {
         const containerWidth = carouselContainerFeature.offsetWidth;
         const translateX = -positionFeature * containerWidth; // Desplaza el slider hacia la izquierda
         sliderFeature.style.transform = `translateX(${translateX}px)`;
@@ -132,5 +132,5 @@
     }
 
     // Auto cambio de imagen cada 10 segundos
-    setInterval(moveRight, 10000);
+    setInterval(moveRightFeature, 10000);
 </script>
